@@ -1,6 +1,5 @@
 package bdd.test;
 
-import io.cucumber.junit.CucumberOptions.SnippetType;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 

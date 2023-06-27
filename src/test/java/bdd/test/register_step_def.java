@@ -55,7 +55,7 @@ public class register_step_def extends base_class {
 	@Then("user navigate to the register page")
 	public void user_navigate_to_the_register_page() {
 		String page2=reg.register_page(); 
-	   System.out.println(page2);
+	    System.out.println(page2);
 	}
 
 	@Then("user want to fill the required field in that page")
