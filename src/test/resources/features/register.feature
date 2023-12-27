@@ -1,7 +1,7 @@
 Feature: Register for online banking
 
 Scenario: verify that user can able to register the login info
-				Given user opens "chrome" browser
+#				Given user opens "chrome" browser
 				When user enters the url of "https://parabank.parasoft.com/parabank"
 				Then user navigate to the login page 
 				And use click the register button

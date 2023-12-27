@@ -58,6 +58,7 @@ public class register extends base_class {
 		
 		@FindBy(xpath = "//input[@type=\"submit\"]")
 		WebElement submit;
+		
 		public String first_page() {
 			String txt=register.getText();
 			Assert.assertEquals(txt, "Register");

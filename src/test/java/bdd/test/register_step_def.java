@@ -2,10 +2,8 @@ package bdd.test;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.*;
 import pageobject.register;
@@ -18,21 +16,29 @@ public class register_step_def extends base_class {
     	scenario.attach(screenshot, "image/png", scenario.getName());
     }
 	
-	@Given("user opens {string} browser")
-	public void user_opens_browser(String browser) {
-	    switch (browser) {
-		case "chrome":
-			driver=new ChromeDriver();
-			break;
-		case "edge":
-			driver=new EdgeDriver();
-			break;
-
-		default:
-			break;
-		}
-	    reg=new register(driver);
+//	@Given("user opens {string} browser")
+//	public void user_opens_browser(String browser) {
+////	    switch (browser) {
+////		case "chrome":
+////			driver=new ChromeDriver();
+////			break;
+////		case "edge":
+////			driver=new EdgeDriver();
+////			break;
+////
+////		default:
+////			break;
+////		}
+//		base_class.intializebrowser(browser);
+//		driver=base_class.getdriver();
+//	    reg=new register(driver);
 	   
+//	}
+	@Before
+	public void user_opens_browser() {
+		base_class.intializebrowser("chrome");
+		driver=base_class.getdriver();
+	    reg=new register(driver);
 	}
 
 	@When("user enters the url of {string}")
